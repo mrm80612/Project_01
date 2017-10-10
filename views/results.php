@@ -1,6 +1,6 @@
 <?php include 'partials/header.php'; ?>
 <pre>
-  <?php //print_r($forecast); ?>
+  <?php print_r($forecast); ?>
 </pre>
 <main>
       <div class="jumbotron jumbotron-fluid" style="background: url('images/01-winter.jpg') center center no-repeat !important; background-size: cover !important;">
