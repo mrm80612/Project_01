@@ -1,8 +1,5 @@
 <?php
-  /**
-   * DarkSky API Demo: Forecast Results
-   * @author Pete Medina
-   */
+
 
   require_once 'app/key.php';
   require_once 'app/forecast.php';
@@ -42,14 +39,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Spotify API</title>
+    <title>Weather App</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
     <header class="bg-dark container-fluid py-4 text-center text-white">
       <h1 class="display-4 m-0">
-        Spotify APIs
+        TODAY'S PLAYLISTS
       </h1>
     </header>
     <main class="container my-5">
