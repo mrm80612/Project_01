@@ -7,7 +7,7 @@
   if( isset($_POST['submit']) && !empty($_POST['location'])){
     require_once 'views/results.php';
   } else {
-    require_once 'views/home.php';
+    require_once 'index.html';
   }
 
   require 'vendor/autoload.php';
