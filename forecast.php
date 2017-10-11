@@ -25,7 +25,7 @@
   // Set the code on the API wrapper
   $api->setAccessToken($accessToken);
 
-  $playlist_term = 'cold weather';
+  $playlist_term = 'hot weather';
 
   $results = $api->search($playlist_term, 'playlist');
 
