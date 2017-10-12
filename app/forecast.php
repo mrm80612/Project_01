@@ -35,7 +35,7 @@
   $formatted_address = $address_data['results'][0]['formatted_address'];
 
   // Call DarkSky and pass along the coordinates we got from Google
-  $forecast = 'https://api.darksky.net/forecast/'.$keys['darksky'].'/'.$coordinates.'/?exclude=minutely?exclude=hourly?lang=es';
+  $forecast = 'https://api.darksky.net/forecast/'.$keys['darksky'].'/'.$coordinates.'/?exclude=minutely?lang=es';
 
   // Get our forecast data back
   $forecast = json_decode(file_get_contents($forecast), true);

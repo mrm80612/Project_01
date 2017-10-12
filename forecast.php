@@ -50,8 +50,8 @@
       </h1>
     </header>
     <main class="container my-5">
-      <h2 class="display-3 py-4"><?php echo ucfirst($playlist_term); ?></h2>
-
+<!--       <h2 class="display-3 py-4"><?php echo ucfirst($playlist_term); ?></h2>
+ -->
       <section class="row">
 
       <?php foreach ($results->playlists->items as $playlist): ?>
