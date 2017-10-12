@@ -1,7 +1,7 @@
 <?php include 'partials/header.php'; ?>
-<pre>
-  <?php print_r($forecast); ?>
-</pre>
+<!-- <pre>
+  <?php //print_r($forecast); ?>
+</pre> -->
 <main>
       <div class="jumbotron jumbotron-fluid" style="background: url('images/03-summer.jpg') center center no-repeat !important; background-size: cover !important;">
         <div class="d-flex justify-content-between">
@@ -32,30 +32,41 @@
         <div class="flex-column">
           <div class="container">
             <div class="card p-4 my-5" style="opacity: 0.5">
-              <div class="row">
+              <div class="d-flex">
+                <?php $counter = 0; ?>
                 <?php foreach($forecast['hourly']['data'] as $hours): ?>
-                  <p class="lead m-0">
-                    <?php echo gmdate("g A", $hours['time']); ?>
-                  </p>
-                  <h2 class="lead m-0">
-                    <?php echo round($hours['temperature']); ?>&deg;
-                  </h2>
+                  <?php 
+                    $counter = $counter+1;
+                    if($counter > 8) break;
+                  ?>
+                  
+                    <p class="lead m-0 mx-3">
+                      <?php echo gmdate("g A", $hours['time']); ?> <?php echo round($hours['temperature']); ?>&deg;
+                    </p>
+
                 <?php endforeach; ?>
               </div>
             </div>
           </div>
           <div class="container">
-            <div class="row justify-content-start" style="opacity: 0.5">
-              <?php foreach($forecast['daily']['data'] as $day): ?>
-                <div class="card p-4 my-5">
-                  <p class="lead m-0">
-                    <?php echo gmdate("D", $day['time']); ?>
-                  </p>
-                  <h2 class="lead m-0">
-                    <?php echo round($day['temperatureHigh']); ?>&deg;
-                  </h2>
-                </div>
-              <?php endforeach; ?> 
+            <div class="justify-content-start" style="opacity: 0.5">
+              <div class="d-flex">
+                <?php $counter_day = 0; ?>
+                <?php foreach($forecast['daily']['data'] as $day): ?>
+                  <?php 
+                      $counter_day = $counter_day+1;
+                      if($counter_day > 5) break;
+                    ?>
+                  <div class="card p-4 my-5">
+                    <p class="lead m-0">
+                      <?php echo gmdate("D", $day['time']); ?> 
+                    </p>
+                    <h2 class="lead m-0">
+                      <?php echo round($day['temperatureHigh']); ?>&deg;
+                    </h2>
+                  </div>
+                <?php endforeach; ?>
+              </div>
             </div>
           </div>
         </div>
