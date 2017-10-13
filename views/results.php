@@ -1,7 +1,7 @@
 <?php include 'partials/header.php'; ?>
-<!-- <pre>
+<pre>
   <?php //print_r($forecast); ?>
-</pre> -->
+</pre>
 <main>
       <div class="jumbotron jumbotron-fluid" style="background: url('images/03-summer.jpg') center center no-repeat !important; background-size: cover !important;">
         <div class="d-flex justify-content-between">
@@ -59,7 +59,7 @@
                     ?>
                   <div class="card p-4 my-5">
                     <p class="lead m-0">
-                      <?php echo gmdate("D", $day['time']); ?> 
+                      <?php echo date("D", $day['time']); ?> 
                     </p>
                     <h2 class="lead m-0">
                       <?php echo round($day['temperatureHigh']); ?>&deg;
@@ -72,22 +72,40 @@
         </div>
 
         <div class="container">
-          <div class="card p-4 my-5" style="opacity: 0.5">
-              <p class="lead text-bold m-0">Details</p>
-              <p class="lead">
-                Temperature: <?php echo round($forecast['currently']['temperature']); ?>&deg;
-              </p>
-              <p class="lead">
-                Humidity: <?php echo round($forecast['currently']['humidity']); ?> %
-              </p>
-              <p class="lead">
-                Visibility: <?php echo round($forecast['currently']['visibility']); ?> Miles
-              </p>
-              <p class="lead">
-                UV Index: <?php echo round($forecast['currently']['uvIndex']); ?>
-              </p>
+          <p class="lead text-bold m-0">Details</p>
+            <div class="card p-4" style="opacity: 0.5">
+              <div class="row">
+                <div class="col">
+                  <p class="lead">
+                    Temperature: <?php echo round($forecast['currently']['temperature']); ?>&deg;
+                  </p>
+                  <p class="lead">
+                    Humidity: <?php echo ($forecast['currently']['humidity']); ?> %
+                  </p>
+                  <p class="lead">
+                    Visibility: <?php echo ($forecast['currently']['visibility']); ?> Miles
+                  </p>
+                  <p class="lead">
+                    UV Index: <?php echo ($forecast['currently']['uvIndex']); ?>
+                  </p>
+                </div>
+                <div class="col">
+                  <p class="lead">
+                    Precipitation: <?php echo ($forecast['currently']['precipProbability']); ?> %
+                  </p>
+                  <p class="lead">
+                    Wind Speed: <?php echo round($forecast['currently']['windSpeed']); ?> MPH
+                  </p>
+                  <p class="lead">
+                    Sunrise: <?php echo round("g A", $forecast['daily']['data']['0']['sunriseTime']); ?> AM
+                  </p>
+                  <p class="lead">
+                    Sunset: <?php echo round("g A", $forecast['daily']['data']['0']['sunsetTime']); ?> PM
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-         </div>
         </div>
       </div>
 </main>
