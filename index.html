@@ -8,20 +8,20 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <title>Weather App</title>
   </head>
-  <body class="bg-dark text-light" style="background: url('images/03-summer.jpg') center center no-repeat !important; background-size: cover !important;">
+  <body class="bg-dark text-light">
 
 
   <!-- Main Content -->
-    <main class="container-fluid" style="background: url('images/03-summer.jpg') center center no-repeat !important; background-size: cover !important;">
+    <main>
     
     <!-- Jumbotron -->
-      <div class="jumbotron jumbotron-fluid" style="background: url('images/03-summer.jpg') center center no-repeat !important; background-size: cover !important;">
+      <div class="jumbotron jumbotron-fluid" style="background: url('images/sunny-day.jpg') center center no-repeat !important; background-size: cover !important;">
         <div class="d-flex justify-content-center">
           <form action="forecast.php" method="post">
            <div class="form-row" style="opacity: 0.5">
             <div class="col">
               <label class="sr-only" for="location">Location</label>
-              <input type="text" class="form-control" id="location" aria-describedby="location-help" placeholder="Location" name="location">
+              <input type="text" class="form-control" id="location" aria-describedby="location-help" placeholder="Location" name="location" value="<?php echo (isset($_POST['location']) ? $_POST['location'] : '') ?>">
             </div>
             <div class="col">
              <button type="submit" name="submit" class="btn btn-light">Submit</button>

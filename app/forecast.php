@@ -29,7 +29,7 @@
   $coordinates = $coordinates['lat'].','.$coordinates['lng'];
 
   // Get the place name from the Google Geo data — we'll echo it later
-  $place = $address_data['results'][0]['address_components'][0]['long_name'];
+  $place = $address_data['results'][0]['address_components'][1]['long_name'];
 
   // Get the formatted address from the Google Geo data
   $formatted_address = $address_data['results'][0]['formatted_address'];

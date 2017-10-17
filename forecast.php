@@ -27,6 +27,13 @@
 
   $playlist_term = 'hot weather';
 
+  // $playlist_term = array(
+  //   'hot weather',
+  //   'cold weather',
+  //   'snowy day',
+  //   'rainy day'
+  // );
+
   $results = $api->search($playlist_term, 'playlist');
 
   // echo '<pre>';
