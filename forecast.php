@@ -35,7 +35,7 @@
             $playlist_term = "Evening chill";
             break;
         case "rain":
-            $playlist_term = "Peaceful piano";
+            $playlist_term = "jazz";
             break;
         case "snow":
             $playlist_term = "Snow day";

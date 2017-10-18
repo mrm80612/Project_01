@@ -1,8 +1,8 @@
 <?php 
     date_default_timezone_set($forecast['timezone']);
     // echo '<pre>';
-    //print_r($forecast);
-    // echo '</pre>';
+    //print_r ($forecast);
+     //echo '</pre>';
 ?>
 <main class="<?php echo $forecast['currently']['icon']; ?> pb-5">
     <div class="container">
@@ -39,7 +39,7 @@
                                 $counter = $counter+1;
                                 if($counter > 8) break;
                             ?>
-                            <p class="lead m-0">
+                            <p class="lead m-0 mx-1">
                                 <?php echo date("g A", $hours['time']); ?><br><?php echo round($hours['temperature']); ?>&deg;
                             </p>
                         <?php endforeach; ?>
