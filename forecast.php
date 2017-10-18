@@ -37,6 +37,21 @@
         case "rain":
             $playlist_term = "Peaceful piano";
             break;
+        case "snow":
+            $playlist_term = "Snow day";
+            break;
+        case "fog":
+            $playlist_term = "Peaceful piano";
+            break;
+        case "cloudy":
+            $playlist_term = "cloudy";
+            break;
+        case "partly-cloudy-day":
+            $playlist_term = "cloudy";
+            break;
+        case "partly-cloudy-night":
+            $playlist_term = "jazz";
+            break;
         default:
             $playlist_term = "Top 40s";
     }
