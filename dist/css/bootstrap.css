@@ -8434,12 +8434,19 @@ main,
   max-width: 340px;
 }
 
+.bg-music {
+  background: red;
+  background: linear-gradient(#f7f7f7, #1c1c1c);
+  /* Standard syntax */
+  background: -webkit-linear-gradient(#f7f7f7, #1c1c1c);
+}
+
 .bg-forecast {
   background: rgba(255, 255, 255, 0.5);
 }
 
 .clear-day {
-  background: url("../../images/backgrounds/sunny-day.jpg") center center no-repeat !important;
+  background: url("../../images/backgrounds/clear-day.jpg") center center no-repeat !important;
   background-size: cover !important;
 }
 

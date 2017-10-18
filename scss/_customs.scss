@@ -36,8 +36,10 @@ main,
 
 // Playlist styles
 .bg-music {
-  // ToDo: Put some hot graphic or colors/look up CSS gradients or something
-  // here to make the playlist space hotter.
+  background: red;
+  background: -moz-linear-gradient(#f7f7f7, #1c1c1c);
+  background: linear-gradient(#f7f7f7, #1c1c1c); /* Standard syntax */
+  background: -webkit-linear-gradient(#f7f7f7, #1c1c1c);
 }
 
 // Transparent backgrounds
@@ -47,7 +49,7 @@ main,
 
 // Background images for different weather conditions
 .clear-day {
-  background: url('../../images/backgrounds/sunny-day.jpg') center center no-repeat !important; 
+  background: url('../../images/backgrounds/clear-day.jpg') center center no-repeat !important; 
   background-size: cover !important;
 }
 

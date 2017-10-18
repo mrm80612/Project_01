@@ -62,18 +62,20 @@
         TODAY&rsquo;S PLAYLISTS
     </h1>
 </div>
-<div class="container my-5 bg-music">
-    <section class="row">
-        <?php foreach ($results->playlists->items as $playlist): ?>
-            <div class="col-12 col-md-4 mb-4">
-                <img class="img-fluid" src="<?php echo $playlist->images[0]->url;?>" width="320" height="320">
-                <h2 class="h4 m-0">
-                    <a href="<?php echo $playlist->uri; ?>">
-                        <?php echo $playlist->name; ?></h2>
-                    </a>
-                </h2>
-            </div>
-        <?php endforeach; ?>
-    </section>
+<div class="py-5 bg-music">
+    <div class="container">
+        <section class="row">
+            <?php foreach ($results->playlists->items as $playlist): ?>
+                <div class="col-12 col-md-4 mb-4">
+                    <img class="img-fluid" src="<?php echo $playlist->images[0]->url;?>" width="320" height="320">
+                    <h2 class="h4 m-0">
+                        <a href="<?php echo $playlist->uri; ?>">
+                            <?php echo $playlist->name; ?></h2>
+                        </a>
+                    </h2>
+                </div>
+            <?php endforeach; ?>
+        </section>
+    </div>
 </div>
 <?php include 'partials/footer.php'; ?>
