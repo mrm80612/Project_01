@@ -1,4 +1,3 @@
-
 // scss-lint:disable QualifyingElement, DuplicateProperty, VendorPrefix
 
 // Reboot
@@ -55,7 +54,6 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
-  letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;
   color: $body-color;
   background-color: $body-bg; // 2
@@ -193,17 +191,9 @@ a {
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
-  &:visited {
-    color: $link-visited-color;
-  }
-
   @include hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
-  }
-
-  &:active {
-    color: $link-active-color;
   }
 }
 
