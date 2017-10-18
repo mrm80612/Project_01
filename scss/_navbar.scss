@@ -1,4 +1,3 @@
-
 // Contents
 //
 // Navbar
@@ -23,11 +22,6 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x;
-  
-        border: none;
-       // BootCats
-  border-radius: 0; // BootCats
-   // BootCats
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properities so that content nested within behave properly.
@@ -115,9 +109,8 @@
   font-size: $navbar-toggler-font-size;
   line-height: 1;
   background: transparent; // remove default button style
-  
-        border: none;
-      
+  border: $border-width solid transparent; // remove default button style
+  @include border-radius($navbar-toggler-border-radius);
 
   @include hover-focus {
     text-decoration: none;

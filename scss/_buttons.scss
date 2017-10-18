@@ -1,4 +1,3 @@
-
 // scss-lint:disable QualifyingElement
 
 //
@@ -12,14 +11,7 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  background: #424242;
-  border-color: #212121;
-  color: #fff;
-  
-        border: $btn-border-width solid #212121;
-      
-  
-  box-shadow: $btn-box-shadow;
+  border: $input-btn-border-width solid transparent;
   @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 

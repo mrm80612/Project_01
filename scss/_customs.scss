@@ -1,0 +1,60 @@
+// Custom Classes
+
+// Create a home background image class
+.bg-home {
+  background: url('../../images/sunny-day.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+// This goes on <body> and forces the main content to take up the
+// full height of the page, causing the footer to stick to the bottom
+// even if the main content isn't normally tall enough to keep it on
+// the bottom of the page.
+.sticky-footer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+// Any one of the three selectors below is required for this to work.
+main, 
+[role="main"],
+.main {
+  flex: 1 !important;
+}
+
+// Create width and center homepage form
+.home-search {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+// Forecast card
+.card-forecast {
+  max-width: 340px;
+}
+
+// Playlist styles
+.bg-music {
+  // ToDo: Put some hot graphic or colors/look up CSS gradients or something
+  // here to make the playlist space hotter.
+}
+
+// Transparent backgrounds
+.bg-forecast {
+  background: rgba(255, 255, 255, .5);
+}
+
+// Background images for different weather conditions
+.clear-day {
+  background: url('../../images/backgrounds/sunny-day.jpg') center center no-repeat !important; 
+  background-size: cover !important;
+}
+
+.clear-night {
+  background: url('../../images/backgrounds/clear-night.jpg') center center no-repeat !important; 
+  background-size: cover !important;
+}
+
+// Etc... add all the icon styles from DarkSky here
+// https://unsplash.com/search/photos/clear-night
