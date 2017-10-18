@@ -1,7 +1,7 @@
 <?php 
     date_default_timezone_set($forecast['timezone']);
     // echo '<pre>';
-    // print_r($forecast);
+    //print_r($forecast);
     // echo '</pre>';
 ?>
 <main class="<?php echo $forecast['currently']['icon']; ?> pb-5">
@@ -67,7 +67,7 @@
 
             <div class="col-12 col-md-6">
                 <div class="card bg-forecast p-4">
-                    <h2 class="h4 text-bold mb-2">Forecast</h2>
+                    <h2 class="h4 text-bold mb-2">Details</h2>
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <p class="lead">
