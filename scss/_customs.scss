@@ -47,6 +47,10 @@ main,
   background: rgba(255, 255, 255, .5);
 }
 
+.clear-day-icon {
+ background: url('../../images/icons/clear-day.jpg');
+}
+
 // Background images for different weather conditions
 .clear-day {
   background: url('../../images/backgrounds/clear-day.jpg') center center no-repeat !important; 

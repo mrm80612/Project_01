@@ -12,7 +12,9 @@
                 <h2 class="display-1 mb-0">
                     <?php echo round($forecast['currently']['temperature']); ?>&deg;
                 </h2>
+
                 <p class="lead">
+                <img src="images/icons/<?php echo $forecast['currently']['icon']; ?>.png" alt="" width="72" height="72"><br>
                     <?php echo $forecast['currently']['summary']; ?>
                 </p>
             </div>
@@ -30,18 +32,22 @@
 
         <div class="row">
             <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
-                <div class="card bg-forecast p-4 mb-4">
+                <div class="card bg-forecast p-3 mb-4">
                     <h2 class="h4 text-bold mb-2">Forecast</h2>
                     <div class="d-flex">
                         <?php $counter = 0; ?>
                         <?php foreach($forecast['hourly']['data'] as $hours): ?>
-                            <?php 
-                                $counter = $counter+1;
-                                if($counter > 8) break;
-                            ?>
-                            <p class="lead m-0 mx-1">
-                                <?php echo date("g A", $hours['time']); ?><br><?php echo round($hours['temperature']); ?>&deg;
-                            </p>
+                          
+                                <?php 
+                                    $counter = $counter+1;
+                                    if($counter > 8) break;
+                                ?>
+                                
+                                <p class="lead m-0 mx-1">
+                                    <img src="images/icons/<?php echo $hours['icon']; ?>.png" alt="" width="54" height="54"><br>
+                                    <?php echo date("g A", $hours['time']); ?><br><?php echo round($hours['temperature']); ?>&deg;
+                                </p>
+                           
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -55,6 +61,7 @@
                             ?>
                         <div class="card bg-forecast p-3">
                             <p class="lead m-0">
+                            <img src="images/icons/<?php echo $day['icon']; ?>.png" alt="" width="54" height="54"><br>
                                 <?php echo date("D", $day['time']); ?> 
                             </p>
                             <h2 class="lead m-0">
